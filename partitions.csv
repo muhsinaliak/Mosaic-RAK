@@ -1,0 +1,18 @@
+# Mosaic RAK Gateway - ESP32-S3 16MB Flash Partition Table
+# Name,   Type, SubType, Offset,   Size,      Flags
+# -------------------------------------------------------------------------
+# Total Flash: 16MB (0x1000000)
+#
+# Layout:
+#   - nvs:        32KB   - Non-volatile storage (WiFi credentials, etc.)
+#   - otadata:    8KB    - OTA data
+#   - app0:       4MB    - Main application
+#   - app1:       4MB    - OTA update partition
+#   - spiffs:     7.9MB  - LittleFS for config, logs, web files
+# -------------------------------------------------------------------------
+
+nvs,        data, nvs,      0x9000,   0x8000,
+otadata,    data, ota,      0x11000,  0x2000,
+app0,       app,  ota_0,    0x20000,  0x400000,
+app1,       app,  ota_1,    0x420000, 0x400000,
+spiffs,     data, spiffs,   0x820000, 0x7E0000,
