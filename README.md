@@ -1,5 +1,5 @@
 # Mosaic RAK Gateway
 
-ESP32 LoRa/MQTT Gateway firmware releases.
+Yeni sürüm güncellemeleri ve notlar.. 
 
 Download the latest firmware from [Releases](https://github.com/muhsinaliak/Mosaic-RAK/releases)
